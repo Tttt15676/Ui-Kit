@@ -1,0 +1,99 @@
+.button {
+  /* Base Button Styles */
+  font-family: inherit;
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-normal);
+  
+  /* Padding and Layout */
+  padding: var(--spacing-md) var(--spacing-lg);
+  border: none;
+  border-radius: var(--border-radius-md);
+  
+  /* Cursor and Interaction */
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  
+  /* Remove default browser button styles */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  
+  /* Typography */
+  letter-spacing: 0.5px;
+  text-align: center;
+  user-select: none;
+  
+  /* Layout */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  
+  /* Shadow */
+  box-shadow: var(--shadow-sm);
+}
+
+/* Primary Variant */
+.primary {
+  background-color: var(--primary-purple);
+  color: var(--neutral-white);
+  border: 2px solid var(--primary-purple);
+}
+
+.primary:hover:not(:disabled) {
+  background-color: var(--primary-purple-light);
+  border-color: var(--primary-purple-light);
+  box-shadow: var(--shadow-md);
+}
+
+.primary:active:not(:disabled) {
+  background-color: var(--primary-purple-dark);
+  border-color: var(--primary-purple-dark);
+  box-shadow: var(--shadow-sm);
+}
+
+.primary:focus-visible {
+  outline: 2px solid var(--primary-purple-dark);
+  outline-offset: 2px;
+}
+
+/* Secondary Variant */
+.secondary {
+  background-color: var(--secondary-silver-light);
+  color: var(--neutral-dark-gray);
+  border: 2px solid var(--secondary-silver-dark);
+}
+
+.secondary:hover:not(:disabled) {
+  background-color: var(--secondary-silver);
+  border-color: var(--secondary-silver-dark);
+  box-shadow: var(--shadow-md);
+}
+
+.secondary:active:not(:disabled) {
+  background-color: var(--secondary-silver-dark);
+  border-color: var(--secondary-silver-dark);
+  color: var(--neutral-white);
+  box-shadow: var(--shadow-sm);
+}
+
+.secondary:focus-visible {
+  outline: 2px solid var(--secondary-silver-dark);
+  outline-offset: 2px;
+}
+
+/* Disabled State */
+.button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background-color: var(--neutral-light-gray);
+  color: var(--neutral-gray);
+  border-color: var(--neutral-light-gray);
+  box-shadow: none;
+}
+
+/* Focus Visible for Accessibility */
+.button:focus-visible {
+  outline-offset: 2px;
+}

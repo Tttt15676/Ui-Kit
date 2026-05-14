@@ -1,0 +1,6 @@
+.label {
+  font-size: var(--font-size-body);
+  color: var(--neutral-dark-gray);
+  font-weight: var(--font-weight-medium);
+  display: inline-block;
+}

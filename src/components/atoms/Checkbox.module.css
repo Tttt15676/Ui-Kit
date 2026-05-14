@@ -1,0 +1,87 @@
+.checkboxWrapper {
+  display: flex;
+  align-items: center;
+  user-select: none;
+}
+
+/* Hide the default browser checkbox input */
+.hiddenInput {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* Label and custom checkbox styling */
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+}
+
+.checkboxLabel:hover .customCheckbox {
+  border-color: var(--primary-purple-light);
+}
+
+/* Disabled state */
+.hiddenInput:disabled ~ .checkboxLabel {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Custom checkbox visual */
+.customCheckbox {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--neutral-gray);
+  border-radius: 4px;
+  background-color: var(--neutral-white);
+  transition: all var(--transition-normal);
+  flex-shrink: 0;
+}
+
+/* Checked state styling */
+.hiddenInput:checked ~ .checkboxLabel .customCheckbox {
+  background-color: var(--primary-purple);
+  border-color: var(--primary-purple);
+}
+
+/* Checkmark styling */
+.checkmark {
+  color: var(--neutral-white);
+  font-size: 14px;
+  font-weight: var(--font-weight-bold);
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Label text styling */
+.labelText {
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-normal);
+  color: var(--neutral-dark-gray);
+  line-height: var(--line-height-normal);
+}
+
+.hiddenInput:disabled ~ .checkboxLabel .labelText {
+  color: var(--neutral-gray);
+}
+
+/* Focus styles for accessibility */
+.hiddenInput:focus-visible ~ .checkboxLabel {
+  outline: 2px solid var(--primary-purple);
+  outline-offset: 2px;
+  border-radius: 4px;
+}

@@ -1,0 +1,15 @@
+.searchBar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: var(--spacing-sm);
+}
+
+.searchInput {
+  flex: 1;
+  min-width: 0;
+}
+
+.searchButton {
+  white-space: nowrap;
+}
